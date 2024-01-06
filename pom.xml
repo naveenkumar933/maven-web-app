@@ -26,4 +26,30 @@
       </plugin>
     </plugins>
   </build>
+  
+To use the SonarQube Maven plugin with Maven version 3.9.6 and SonarQube version 7.6, you need to include the appropriate plugin configuration in your project's pom.xml file. Below is an example configuration for the SonarQube Maven plugin:
+
+xml
+Copy code
+<build>
+    <plugins>
+        <!-- Add other plugins as needed -->
+        <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.10.0.1742</version>
+        </plugin>
+      <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.6.0.1398</version>
+        </plugin>
+    </plugins>
+</build>
+
+<properties>
+    <sonar.host.url>http://http://13.235.31.160:9000</sonar.host.url>
+    <sonar.login>3d55b83df59a21ba3da20918235832280401bff9</sonar.login>
+    <!-- Other SonarQube properties as needed -->
+</properties>
 </project>
